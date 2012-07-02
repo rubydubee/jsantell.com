@@ -1,0 +1,12 @@
+{
+  "name": "swag_web",
+  "version": "0.0.1",
+  "engines": ["node >= 0.6.12"],
+  "main": "app.js",
+  "dependencies":
+  {
+    "express":          ">= 2.5.8",
+    "jade" :            ">= 0.20.3",
+    "connect" :         "= 1.8.5"
+  }
+}
