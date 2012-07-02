@@ -22,6 +22,10 @@ html
         .content
           != body
     .sidebar
+      ul.categories
+        - each cat in allCategories
+          li
+            a(href=categoryUrl(cat)) #{cat}
       ul.tags
         - each tag in allTags
           li
