@@ -1,10 +1,4 @@
 h1 INDEX!!
-- each post in getPosts(0,3) 
-  h1 
-    a(href=post.url) #{post.title}
-  ul.tags
-    - each tag in post.tags
-      li
-        a(href=tagUrl(tag)) #{tag}
-
-include includes/pagination
+- var posts = getPosts(0,3)
+- var page  = 1
+include list
