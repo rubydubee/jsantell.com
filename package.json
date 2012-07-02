@@ -6,7 +6,6 @@
   "dependencies":
   {
     "express":          ">= 2.5.8",
-    "jade" :            ">= 0.20.3",
-    "connect" :         "= 1.8.5"
+    "jade" :            ">= 0.20.3"
   }
 }
