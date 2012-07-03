@@ -3,7 +3,7 @@ html
   head
     title= "SWAG"
     link(rel='stylesheet', href='/css/normalize.css')
-    link(rel='stylesheet', href='/css/layout.css')
+    link(rel='stylesheet', href='/css/bootstrap.css')
   body
     .navbar.navbar-fixed-top
       .navbar-inner
@@ -20,16 +20,18 @@ html
                 a(href='/') nothing 
     .wrap
       .container
-        .content
-          != body
-      .sidebar
-        h2 categories
-        ul.categories
-          - each cat in allCategories
-            li
-              a(href=categoryUrl(cat)) #{cat}
-        h2 tags
-        ul.tags
-          - each tag in allTags
-            li
-              a(href=tagUrl(tag)) #{tag}
+        .row
+          .span9
+            != body
+          .span3
+            .sidebar-nav.well
+              h3 categories
+              ul.categories
+                - each cat in allCategories
+                  li
+                    a(href=categoryUrl(cat)) #{cat}
+              h3 tags
+              ul.tags
+                - each tag in allTags
+                  li
+                    a(href=tagUrl(tag)) #{tag}
