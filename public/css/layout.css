@@ -1,0 +1,79 @@
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* header */
+
+.navbar {
+    overview: visible;
+    margin-bottom: 20px;
+}
+
+.navbar-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
+    background-color: #2c2c2c;
+    background-image: -moz-linear-gradient(top, #333333, #222222);
+    background-image: -ms-linear-gradient(top, #333333, #222222);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
+    background-image: -webkit-linear-gradient(top, #333333, #222222);
+    background-image: -o-linear-gradient(top, #333333, #222222);
+    background-image: linear-gradient(top, #333333, #222222);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar .brand {
+    float: left;
+}
+.nav-collapse {
+    height: auto;
+}
+.nav {
+    margin: 0 0 0 0;
+    list-style: none;
+}
+.nav > li > a {
+    float: left;
+    display: block;
+}
+    .nav > li > a:hover {
+        text-decoration: none;
+        background-color: #eeeeee;
+        }
+        .nav .nav-header {
+            display: block;
+            padding: 3px 15px;
+            font-size: 11px;
+            font-weight: bold;
+            line-height: 18px;
+            color: #999999;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+                        }
+.wrap {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    *zoom: 1
+}
+
+.container {
+    width: 740px;
+    float: left;
+}
+.sidebar {
+    width: 200px;
+    float: right;
+}
