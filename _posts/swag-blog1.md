@@ -1,6 +1,7 @@
 {{{
   "title" : "Introducing Swag Blog BEEEOOOP",
   "tags" : [ "node.js", "swag-blog" ],
+  "category" : "swag-blog",
   "date" : "7-05-2012"
 }}}
 

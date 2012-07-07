@@ -1,6 +1,7 @@
 {{{
   "title" : "Introducing Dancer.js",
   "tags" : [ "three.js", "dancer.js", "web audio" ],
+  "category" : "dancer.js",
   "date" : "7-10-2012"
 }}}
 
