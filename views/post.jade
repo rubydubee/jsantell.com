@@ -3,7 +3,7 @@ h1
     = post.title
 div.post
   != post.content
-ul.tags
+div.tags
   - each tag in post.tags
-    li
-      a(href=tagUrl(tag)) #{tag}
+    a(href=tagUrl(tag))
+      span.label.label-info #{tag}

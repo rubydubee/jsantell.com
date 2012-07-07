@@ -25,13 +25,22 @@ html
             != body
           .span3
             .sidebar-nav.well
-              h3 categories
-              ul.categories
+              ul.nav.nav-list
+                li.nav-header categories
                 - each cat in allCategories
                   li
                     a(href=categoryUrl(cat)) #{cat}
-              h3 tags
-              ul.tags
+                li.nav-header tags
                 - each tag in allTags
                   li
                     a(href=tagUrl(tag)) #{tag}
+        .row
+          .span4
+            h3 about
+            p blahblah
+          .span4
+            h3 osmeshit
+            p blahblah
+          .span4
+            h3 osmeshit
+            p sldkjflskdjfskdfslkdjflskdjflsdfsldfjskldjfsldjflksjdfklsjdflksjadfkljsdklfjskldfj  sadlkfj lsadjf lskadjf sda flksadjf lksjdlkf jsdlkj lsadj lksdjfk ljsadklfj sadjf sjadlkfjsdsakl
