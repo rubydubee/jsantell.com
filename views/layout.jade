@@ -1,15 +1,16 @@
 !!!
 html
   head
-    title= "SWAG"
+    title= "Jordan Santell"
     link(rel='stylesheet', href='/css/normalize.css')
-    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/font-awesome.css')
+    link(rel='stylesheet', href='/css/layout.css')
   body
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
           .brand
-            a(href='/') SWAG
+            a(href='/') Only the finest javascripts 
           .nav-collapse
             ul.nav
               li
@@ -20,27 +21,31 @@ html
                 a(href='/') nothing 
     .wrap
       .container
-        .row
-          .span9
-            != body
-          .span3
-            .sidebar-nav.well
-              ul.nav.nav-list
-                li.nav-header categories
-                - each cat in allCategories
-                  li
-                    a(href=categoryUrl(cat)) #{cat}
-                li.nav-header tags
-                - each tag in allTags
-                  li
-                    a(href=tagUrl(tag)) #{tag}
-        .row
-          .span4
-            h3 about
-            p blahblah
-          .span4
-            h3 osmeshit
-            p blahblah
-          .span4
-            h3 osmeshit
-            p sldkjflskdjfskdfslkdjflskdjflsdfsldfjskldjfsldjflksjdfklsjdflksjadfkljsdklfjskldfj  sadlkfj lsadjf lskadjf sda flksadjf lksjdlkf jsdlkj lsadj lksdjfk ljsadklfj sadjf sjadlkfjsdsakl
+        .content
+          != body
+        .sidebar
+          .sidebar-nav.well
+            ul.nav.nav-list
+              li.nav-header categories
+              - each cat in allCategories
+                li
+                  a(href=categoryUrl(cat)) #{cat}
+              li.nav-header tags
+              - each tag in allTags
+                li
+                  a(href=tagUrl(tag)) #{tag}
+        .clear
+    .footer
+      .span4
+        h3 about
+        p blahblah
+      .span4
+        h3 osmeshit
+        p blahblah
+      .span4
+        h3 osmeshit
+        p sldkjflskdjfskdfslkdjflskdjflsdfsldfjskldjfsldjflksjdfklsjdflksjadfkljsdklfjskldfj  sadlkfj lsadjf lskadjf sda flksadjf lksjdlkf jsdlkj lsadj lksdjfk ljsadklfj sadjf sjadlkfjsdsakl
+  script(src='/js/jquery.js')
+  script(src='/js/jquery.twitch.js')
+  script(src='/js/jquery.ghRepo.js')
+  script(src='/js/ui.js')

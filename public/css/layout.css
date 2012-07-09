@@ -1,22 +1,46 @@
+@font-face {
+    font-family: 'OstrichRegular';
+    src: url('../fonts/ostrich-regular-webfont.eot');
+    src: url('../fonts/ostrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ostrich-regular-webfont.woff') format('woff'),
+    url('../fonts/ostrich-regular-webfont.ttf') format('truetype'),
+    url('../fonts/ostrich-regular-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family: 'OstrichBold';
+    src: url('../fonts/ostrich-bold-webfont.eot');
+    src: url('../fonts/ostrich-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ostrich-bold-webfont.woff') format('woff'),
+    url('../fonts/ostrich-bold-webfont.ttf') format('truetype'),
+    url('../fonts/ostrich-bold-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight:normal;
+}
+
 html {
+    margin: 0;
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    background-image: url(../img/light_wool.png);
 }
+
 /* header */
 
 .navbar {
     overview: visible;
-    margin-bottom: 20px;
-}
-
-.navbar-inner {
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 40px;
+    margin-bottom: 0;
+    height: 80px;
+    padding-left: 0;
+    padding-right: 0;
     background-color: #2c2c2c;
     background-image: -moz-linear-gradient(top, #333333, #222222);
     background-image: -ms-linear-gradient(top, #333333, #222222);
@@ -26,16 +50,18 @@ body {
     background-image: linear-gradient(top, #333333, #222222);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    width: auto;
 }
 
-.navbar .brand {
+.navbar .brand a {
     float: left;
+    font-size: 200%;
+    margin-top: 5px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #aaee22;
+    font-family: 'OstrichRegular';
+    text-transform: uppercase;
+    font-size: 250%;
 }
 .nav-collapse {
     height: auto;
@@ -56,12 +82,21 @@ body {
             display: block;
             padding: 3px 15px;
             font-size: 11px;
-            font-weight: bold;
             line-height: 18px;
             color: #999999;
             text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
             text-transform: uppercase;
-                        }
+        }
+
+.navbar .container {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
+ * Layout
+ */
+
 .wrap {
     width: 940px;
     margin-left: auto;
@@ -69,11 +104,157 @@ body {
     *zoom: 1
 }
 
-.container {
+.wrap .container {
+    width: 940px;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    background-color: #fcfcfc;
+    padding: 20px;
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.content {
     width: 740px;
     float: left;
 }
+
 .sidebar {
     width: 200px;
     float: right;
+}
+
+/*
+ * Globals
+ */
+
+.rounded {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #ff0077;
+    font-weight: 400;
+}
+
+a:hover {
+    color: #333;
+}
+
+.clear {
+    clear: both;
+}
+
+/*
+ *
+ */
+
+.label {
+    background-color: #ff0077;
+    color: #fff;
+    font-size: 80%;
+    padding: 3px;
+    margin: 0 3px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+  height: 36px;
+  margin: 18px 0;
+}
+.pagination ul {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-left: 0;
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.pagination li {
+  display: inline;
+}
+.pagination a {
+  float: left;
+  padding: 0 14px;
+  line-height: 34px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-left-width: 0;
+}
+.pagination a:hover, .pagination .active a {
+  background-color: #f5f5f5;
+}
+.pagination .active a {
+  color: #999999;
+  cursor: default;
+}
+.pagination .disabled a, .pagination .disabled a:hover {
+  color: #999999;
+  background-color: transparent;
+  cursor: default;
+}
+.pagination li:first-child a {
+  border-left-width: 1px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.pagination li:last-child a {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.pagination-centered {
+  text-align: center;
+}
+.pagination-right {
+  text-align: right;
+}
+
+/*
+ * Headers
+ */
+
+h1 {
+    font-family: 'OstrichRegular';
+    text-transform: uppercase;
+    font-size: 190%;
+}
+
+h2 {
+    font-family: 'OstrichRegular';
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 110%;
+
+}
+
+/*
+ * Footer
+ */
+
+.footer {
+    background-color: #555555;
+    margin-bottom: 0;
+    border-top: 4px solid #aaee22;
+    clear: both;
 }
