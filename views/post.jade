@@ -8,3 +8,7 @@ div.post
     - each tag in post.tags
       a(href=tagUrl(tag))
         span.label.label-info #{tag}
+  #disqus_thread
+  script(src='/js/disqus.js')
+  noscript Please enable JavaScript to view comments
+
