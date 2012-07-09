@@ -4,8 +4,7 @@ var
   app      = module.exports = express.createServer();
 
 swag( app, {
-  posts: './_posts/',
-  route: '/post/'
+  posts: './_posts/'
 });
 
 app.configure(function () {
@@ -23,7 +22,12 @@ app.configure( 'production', function () {
   app.use( express.errorHandler() );
 });
 
+app.get( '/', function ( req, res ) {
+  res.render( 'index' );
+});
 
-
+app.get( '/projects', function ( req, res ) {
+  res.render( 'projects' );
+});
 
 app.listen( 3000 );
