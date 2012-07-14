@@ -1,11 +1,20 @@
 var
-  express  = require('express'),
-  swag     = require('swag-blog'),
-  app      = module.exports = express.createServer();
+  express  = require( 'express' ),
+  app      = module.exports = express.createServer(),
+  swag     = require( 'swag-blog' )( app );
 
-swag( app, {
-  posts: './_posts/'
-});
+// All default options, but shown for example
+
+swag.set({
+  postsPerPage : 2,
+  posts        : './_posts',
+  metaFormat   : 'json'
+}).createPostRoute( '/post/', 'post' )
+  .createPostListRoute( '/posts/', 'postList' )
+  .createTagRoute( '/tag/', 'tag' )
+  .createCategoryRoute( '/category/', 'category' )
+  .init();
+
 
 app.configure(function () {
   app.set( 'views', __dirname + '/views' );
