@@ -1,11 +1,13 @@
 $(function () {
+    var DROP_SPEED = 250;
 
-    $('a').twitch();
     $('.gh-watch')
         .append('<i class="icon-eye-open"></i>')
         .ghRepo({ data: 'watchers' });
-/*    $('.gh-fork')
-        .append('<i class="icon-eye-open"></i>')
-        .ghRepo({ data: 'forks' });
-*/
+
+    $('.sidebar h3.categories a, .sidebar h3.tags a').click(function (e) {
+        e.preventDefault();
+        var $ul = $(this).closest('h3').next();
+        $ul[ $ul.is(':visible') ? 'slideUp' : 'slideDown' ](DROP_SPEED);
+    });
 });
