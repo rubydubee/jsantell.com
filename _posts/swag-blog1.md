@@ -2,7 +2,7 @@
   "title" : "Introducing Swag Blog BEEEOOOP",
   "tags" : [ "node.js", "swag-blog" ],
   "category" : "swag-blog",
-  "date" : "7-05-2012"
+  "date" : "8-20-2012"
 }}}
 
 **node-markdown** is based on [Showdown](http://attacklab.net/showdown/) parser and is meant to parse [Markdown](http://daringfireball.net/projects/markdown/) syntax into HTML code.
