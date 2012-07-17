@@ -10,4 +10,12 @@ $(function () {
         var $ul = $(this).closest('h3').next();
         $ul[ $ul.is(':visible') ? 'slideUp' : 'slideDown' ](DROP_SPEED);
     });
+
+    $('.tweets').tweet({
+        username: 'jsantell',
+        avatar_size: 32,
+        filter: function(t){ return ! /^@\w+/.test(t.tweet_raw_text); },
+        count: 5,
+        fetch: 15
+    });
 });
