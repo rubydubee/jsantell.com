@@ -9,7 +9,7 @@ swag.set({
   postsPerPage : 2,
   posts        : './_posts',
   metaFormat   : 'json'
-}).createPostRoute( '/post/:post', 'post', '{TITLE}'
+}).createPostRoute( '/post/:post', 'post' )
   .createPostListRoute( '/posts/:page', 'postList' )
   .createTagRoute( '/tag/:tag', 'tag' )
   .createCategoryRoute( '/category/:category', 'category' )
