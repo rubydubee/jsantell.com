@@ -1,14 +1,25 @@
 !!!
 html
   head
-    - if (typeof title !== "undefined" )
-      title= title
+    //- Output page title
     - if (typeof post !== "undefined" && post.title !== "undefined")
       title= post.title + " * Jordan Santell"
-    - if (typeof tag !== "undefined")
+      meta(name='description', content=post.description)
+    - else if (typeof tag !== "undefined")
       title= tag + " * Jordan Santell"
-    - if (typeof category !== "undefined")
+      meta(name='description', content='Jordan Santell, posts tagged with #{tag}')
+    - else if (typeof category !== "undefined")
       title= category + " * Jordan Santell"
+      meta(name='description', content='Jordan Santell, posts of category #{category}')
+    - else if (typeof title !== "undefined" )
+      title= title
+      meta(name='description', content='Jordan Santell, JavaScript engineer and development blog, open source projects, and discussion.')
+    - else
+      title= 'Jordan Santell'
+      meta(name='description', content='Jordan Santell, JavaScript engineer and development blog, open source projects, and discussion.')
+
+    meta(charset='utf-8')
+
     link(rel='stylesheet', href='/css/normalize.css')
     link(rel='stylesheet', href='/css/layout.css')
     link(rel='stylesheet', href='/css/font-awesome.css')
@@ -41,6 +52,7 @@ html
         .span
           h3 about
           include includes/about
+          include includes/social
         .span
           h3 never stop screaming
           .tweets
