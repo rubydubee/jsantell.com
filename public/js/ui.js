@@ -18,4 +18,10 @@ $(function () {
         count: 5,
         fetch: 15
     });
+
+    $('a.email').each(function () {
+        $(this).attr('href', 'mailto:' + 'jsantell' + '@' + 'gmail.com');
+    });
+
+    prettyPrint();
 });
