@@ -1,11 +1,11 @@
 var
   express  = require( 'express' ),
   app      = module.exports = express.createServer(),
-  swag     = require( 'swag-blog' )( app );
+  poet     = require( 'poet' )( app );
 
 // All default options, but shown for example
 
-swag.set({
+poet.set({
   postsPerPage : 2,
   posts        : './_posts',
   metaFormat   : 'json'
