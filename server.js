@@ -10,7 +10,7 @@ poet.set({
   posts        : './_posts',
   metaFormat   : 'json'
 }).createPostRoute( '/post/:post', 'post' )
-  .createPostListRoute( '/posts/:page', 'postList' )
+  .createPageRoute( '/page/:page', 'page' )
   .createTagRoute( '/tag/:tag', 'tag' )
   .createCategoryRoute( '/category/:category', 'category' )
   .init();
