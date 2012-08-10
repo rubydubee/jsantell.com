@@ -396,3 +396,44 @@ ul.social span {
 #disqus_thread {
     margin-top: 45px;
 }
+
+/*
+ * Sharing
+ */
+
+.share .box {
+    margin: 20px auto;
+    width: 100%;
+    font-size: 24px;
+}
+
+.share .count {
+    font-weight: bold;
+    font-size: 50px;
+    float: left;
+    padding-right: 10px;
+    border-right: 2px solid #ff0077;
+}
+
+.share .share {
+    float: left;
+    margin-left: 20px;
+}
+
+.share .buttons {
+    width: 180px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: #eee;
+    border: 1px solid #666;
+    padding: 10px;
+    -webkit-box-shadow: 0 2px 2px #666;
+    -moz-box-shadow: 0 2px 2px #666;
+    box-shadow: 0 2px 2px #666;
+}
+
+.share .button {
+    float: left;
+    max-width: 50px;
+    margin-right: 10px;
+}

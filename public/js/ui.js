@@ -23,5 +23,26 @@ $(function () {
         $(this).attr('href', 'mailto:' + 'jsantell' + '@' + 'gmail.com');
     });
 
+    $('.share').sharrre({
+        share: {
+            googlePlus: true,
+            facebook: true,
+            twitter: true
+        },
+        enableTracking: true,
+        buttons: {
+            googlePlus: { size: 'tall' },
+            facebook: { layout: 'box_count' },
+            twitter: { count: 'vertical' }
+        },
+        hover: function (api, options) {
+            $(api.element).find('.buttons').show();
+        },
+        hide: function(api, options) {
+            $(api.element).find('.buttons').hide();
+        }
+    });
+
+
     prettyPrint();
 });

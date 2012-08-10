@@ -2,7 +2,8 @@
   "title" : "Introducing Dancer.js",
   "tags" : [ "three.js", "dancer.js", "web audio" ],
   "category" : "dancer.js",
-  "date" : "7-10-2012"
+  "date" : "7-10-2012",
+  "description" : "An introduction to Dancer.js, here's a quick tutorial..."
 }}}
 
 **node-markdown** is based on [Showdown](http://attacklab.net/showdown/) parser and is meant to parse [Markdown](http://daringfireball.net/projects/markdown/) syntax into HTML code.
