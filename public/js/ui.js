@@ -40,7 +40,8 @@ $(function () {
         },
         hide: function(api, options) {
             $(api.element).find('.buttons').hide();
-        }
+        },
+        urlCurl: '/sharrre.php' // ewww
     });
 
 

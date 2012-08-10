@@ -401,26 +401,34 @@ ul.social span {
  * Sharing
  */
 
-.share .box {
+div.share {
+    height: 100px;
     margin: 20px auto;
-    width: 100%;
-    font-size: 24px;
+    width: 120px;
+}
+.share .box {
+    width: 120px;
+    margin-left: 20px;
 }
 
 .share .count {
     font-weight: bold;
     font-size: 50px;
     float: left;
-    padding-right: 10px;
-    border-right: 2px solid #ff0077;
+    margin-top: 5px;
 }
 
 .share .share {
+    border-left: 2px solid #ff0077;
+    padding-left: 10px;
     float: left;
-    margin-left: 20px;
+    width: 30px;
+    font-size: 20px;
+    margin: 0px 0 0 20px;
 }
 
 .share .buttons {
+    position: absolute;
     width: 180px;
     height: 80px;
     margin: 0 auto;
@@ -435,5 +443,9 @@ ul.social span {
 .share .button {
     float: left;
     max-width: 50px;
-    margin-right: 10px;
+    margin: 0 10px 0 0;
+}
+
+.share .facebook {
+    margin: 0 4px 0 0;
 }
