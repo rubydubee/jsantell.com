@@ -1,6 +1,6 @@
 ul.pagination
   - var i = 1;
-  - while ( i <= pageCount )
+  - while ( i <= getPageCount() )
     if page == i
       li(class='active')
         a(href=pageUrl(i)) #{i}

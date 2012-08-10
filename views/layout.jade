@@ -38,13 +38,13 @@ html
           h3.categories
             a(href='/categories') Categories
           ul
-            - each cat in allCategories
+            - each cat in categoryList
               li
                 a(href=categoryUrl(cat)) #{cat}
           h3.tags
             a(href='/tags') tags
           ul
-            - each tag in allTags
+            - each tag in tagList
               li
                 a(href=tagUrl(tag)) #{tag}
         .clear
@@ -59,6 +59,7 @@ html
           .tweets
         .clear
   script(src='/js/jquery.js')
+  script(src='/js/jquery.sharrre.min.js')
   script(src='/js/jquery.tweet.js')
   script(src='/js/jquery.ghRepo.js')
   script(src='/js/prettify.js')
