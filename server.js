@@ -6,8 +6,8 @@ var
 // All default options, but shown for example
 
 swag.set({
-  postsPerPage : 2,
-  posts        : './_posts',
+  postsPerPage : 5,
+  posts        : __dirname + '/_posts',
   metaFormat   : 'json'
 }).createPostRoute( '/post/', 'post' )
   .createPostListRoute( '/posts/', 'postList' )
