@@ -1,50 +1,67 @@
 !!!
 html
   head
-    title= "Jordan Santell"
+    //- Output page title
+    - if (typeof post !== "undefined" && post.title !== "undefined")
+      title= post.title + " * Jordan Santell"
+      meta(name='description', content=post.description)
+    - else if (typeof tag !== "undefined")
+      title= tag + " * Jordan Santell"
+      meta(name='description', content='Jordan Santell, posts tagged with #{tag}')
+    - else if (typeof category !== "undefined")
+      title= category + " * Jordan Santell"
+      meta(name='description', content='Jordan Santell, posts of category #{category}')
+    - else if (typeof title !== "undefined" )
+      title= title
+      meta(name='description', content='Jordan Santell, JavaScript engineer and development blog, open source projects, and discussion.')
+    - else
+      title= 'Jordan Santell'
+      meta(name='description', content='Jordan Santell, JavaScript engineer and development blog, open source projects, and discussion.')
+
+    meta(charset='utf-8')
+
     link(rel='stylesheet', href='/css/normalize.css')
     link(rel='stylesheet', href='/css/layout.css')
     link(rel='stylesheet', href='/css/font-awesome.css')
+    link(rel='stylesheet', href='/css/prettify.css')
+    script(src='/js/ga.js')
   body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          .brand
-            a(href='/') Jordan Santell
-              span only the finest javascripts
-          .nav-collapse
-            ul.nav
-              li
-                a(href='/projects') projects
-              li
-                a(href='/contact') contact 
     .wrap
       .container
         .content
           != body
         .sidebar
-          .sidebar-nav.well
-            ul.nav.nav-list
-              li.nav-header categories
-              - each cat in allCategories
-                li
-                  a(href=categoryUrl(cat)) #{cat}
-              li.nav-header tags
-              - each tag in allTags
-                li
-                  a(href=tagUrl(tag)) #{tag}
+
+          h2.name
+            a(href='/') Jordan Santell
+          h3.projects
+            a(href='/projects') Projects
+          h3.categories
+            a(href='/categories') Categories
+          ul
+            - each cat in categoryList
+              li
+                a(href=categoryUrl(cat)) #{cat}
+          h3.tags
+            a(href='/tags') tags
+          ul
+            - each tag in tagList
+              li
+                a(href=tagUrl(tag)) #{tag}
         .clear
     .footer
-      .span4
-        h3 about
-        p blahblah
-      .span4
-        h3 osmeshit
-        p blahblah
-      .span4
-        h3 osmeshit
-        p sldkjflskdjfskdfslkdjflskdjflsdfsldfjskldjfsldjflksjdfklsjdflksjadfkljsdklfjskldfj  sadlkfj lsadjf lskadjf sda flksadjf lksjdlkf jsdlkj lsadj lksdjfk ljsadklfj sadjf sjadlkfjsdsakl
+      .container
+        .span
+          h3 about
+          include includes/about
+          include includes/social
+        .span
+          h3 never stop screaming
+          .tweets
+        .clear
   script(src='/js/jquery.js')
-  script(src='/js/jquery.twitch.js')
+  script(src='/js/jquery.sharrre.min.js')
+  script(src='/js/jquery.tweet.js')
   script(src='/js/jquery.ghRepo.js')
+  script(src='/js/prettify.js')
   script(src='/js/ui.js')
