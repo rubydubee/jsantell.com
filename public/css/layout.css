@@ -317,7 +317,7 @@ pre {
 .citation a:before {
   content: '-- ';
 }
-.post img.center {
+img.center {
   display: block;
   margin: 0 auto;
 }
