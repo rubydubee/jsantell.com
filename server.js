@@ -17,6 +17,7 @@ app.set( 'views', __dirname + '/views' );
 app.set( 'view engine', 'jade' );
 app.use( express.static( __dirname + '/public' ));
 app.use( app.router );
+app.use( notFoundFn );
 
 app.configure('development', function () {
   app.use( express.errorHandler({ dumpExceptions: true, showStack: true }) );
@@ -29,3 +30,11 @@ app.configure( 'production', function () {
 require( './routes' )( app );
 
 app.listen( 3000 );
+
+function notFoundFn ( req, res ) {
+  if ( req.accepts( 'html' )) {
+    res.status( 404 );
+    res.render( '404', { url: req.url });
+    return;
+  }
+}
