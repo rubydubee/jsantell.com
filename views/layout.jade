@@ -20,10 +20,13 @@ html
 
     meta(charset='utf-8')
 
-    link(rel='stylesheet', href='/css/normalize.css')
-    link(rel='stylesheet', href='/css/layout.css')
-    link(rel='stylesheet', href='/css/font-awesome.css')
-    link(rel='stylesheet', href='/css/prettify.css')
+    - if (settings.env == 'development')
+      link(rel='stylesheet', href='/css/normalize.css')
+      link(rel='stylesheet', href='/css/layout.css')
+      link(rel='stylesheet', href='/css/font-awesome.css')
+      link(rel='stylesheet', href='/css/prettify.css')
+    - else
+      link(rel='stylesheet', href='/css/site.css')
     script(src='/js/ga.js')
   body
     .wrap
@@ -59,9 +62,12 @@ html
           h3 never stop screaming
           .tweets
         .clear
-  script(src='/js/jquery.js')
-  script(src='/js/jquery.sharrre.min.js')
-  script(src='/js/jquery.tweet.js')
-  script(src='/js/jquery.ghRepo.js')
-  script(src='/js/prettify.js')
-  script(src='/js/ui.js')
+  - if (settings.env == 'development')
+    script(src='/js/jquery.js')
+    script(src='/js/jquery.sharrre.js')
+    script(src='/js/jquery.tweet.js')
+    script(src='/js/jquery.ghRepo.js')
+    script(src='/js/prettify.js')
+    script(src='/js/ui.js')
+  - else
+    script(src='/js/site.min.js')
