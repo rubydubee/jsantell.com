@@ -1,6 +1,6 @@
 var
   express  = require( 'express' ),
-  app      = module.exports = express.createServer(),
+  app      = express(),
   poet     = require( 'poet' )( app );
 
 poet.set({

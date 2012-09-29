@@ -1,4 +1,7 @@
-h1
-  a(href=categoryUrl(category)) posts in category * #{category}
-- each post in posts
-  include includes/postSnippet
+extends layout
+
+block content
+  h1
+    a(href=categoryUrl(category)) posts in category * #{category}
+  - each post in posts
+    include includes/postSnippet

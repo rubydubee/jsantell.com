@@ -1,5 +1,8 @@
-h1 All Tags
-ul
-  - each tag in tagList
-    li
-      a(href=tagUrl(tag)) #{tag}
+extends layout
+
+block content
+  h1 All Tags
+  ul
+    - each tag in tagList
+      li
+        a(href=tagUrl(tag)) #{tag}
