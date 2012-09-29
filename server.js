@@ -4,7 +4,7 @@ var
   poet     = require( 'poet' )( app );
 
 poet.set({
-  postsPerPage : 2,
+  postsPerPage : 5,
   posts        : __dirname + '/_posts',
   metaFormat   : 'json'
 }).createPostRoute( '/post/:post', 'post' )
@@ -13,13 +13,10 @@ poet.set({
   .createCategoryRoute( '/category/:category', 'category' )
   .init();
 
-app.configure(function () {
-  app.set( 'views', __dirname + '/views' );
-  app.set( 'view engine', 'jade' );
-  app.use( express.static( __dirname + '/public' ));
-  app.use( app.router );
-});
-
+app.set( 'views', __dirname + '/views' );
+app.set( 'view engine', 'jade' );
+app.use( express.static( __dirname + '/public' ));
+app.use( app.router );
 
 app.configure('development', function () {
   app.use( express.errorHandler({ dumpExceptions: true, showStack: true }) );
