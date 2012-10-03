@@ -97,19 +97,32 @@ If everything is going good, you should see the text **HOORAY! EXPRESS IS RUNNIN
 
 ## Now time to plug in Poet...
 
-We confirmed that our app is correctly serving up content via Express, but now lets tie in Poet's auto route generation. Right before we set our express variables, lets drop in Poet's autoroutes.
+We confirmed that our app is correctly serving up content via Express, but now lets tie in Poet's auto route generation. Right before we set our express variables, lets drop in Poet's autoroutes. also, let's render our index.jade file instead of test.jade. here is the complete code:
 
 <pre>
+// server.js
+var
+  express = require('express'),
+  app     = express(),
+  poet    = require('poet')( app );
+
 poet
   .createPostRoute()
   .createPageRoute()
   .createTagRoute()
   .createCategoryRoute()
   .init();
+
+app.set( 'view engine', 'jade' );
+app.set( 'views', __dirname + '/views' );
+app.use( express.static( __dirname + '/public' ) );
+app.use( app.router );
+
+app.get( '/', function ( req, res ) { res.render( 'index' ); });
+app.listen( 3000 );
 </pre>
 
-Perfect. Now let's fire up our app again with `node .` and visit `localhost:3000` -- you should see a listing of a few posts, with tags and categories listed on the side.
-
+Perfect. Now let's fire up our app again with `node .` and visit `localhost:3000` -- you should see a listing with one blog post, with tags and categories listed on the side.
 
 ## Your Own Posts
 
