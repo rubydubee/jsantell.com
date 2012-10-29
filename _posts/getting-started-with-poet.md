@@ -3,13 +3,13 @@
   "tags" : [ "node.js", "poet" ],
   "category" : "node.js",
   "date" : "9-29-2012",
-  "description" : "A brief introduction to the node.js module, Poet, to quickly create your own blog.",
-  "preview" : "Last week at [Node Philly](http://node.ph), we had a hack-and-meet event, where there were tutorials on the HTTP module in node, using Express, and having released and presented [Poet](https://github.com/jsantell/poet) at the previous meetup, I helped out those group going through the set up. Here's the tutorial I wrote for a hack and covers everything, so once you have node and npm installed with no further knowledge, you should be able to follow along and get a blog up and running!<img src='/img/poet_small.png' class='center' alt='poet' />"
+  "description" : "A brief introduction to the node.js module, Poet, to quickly create your own blog."
 }}}
 
 Last week at [Node Philly](http://node.ph), we had a hack-and-meet event, where there were tutorials on the HTTP module in node, using Express, and having released and presented [Poet](https://github.com/jsantell/poet) at the previous meetup, I helped out those going through the set up. Here's the tutorial I wrote for a hack and covers everything, so once you have node and npm installed with no further knowledge, you should be able to follow along and get a blog up and running!
 <img src="/img/poet_small.png" class="center" alt="poet" />
 
+<!--more-->
 
 ## Requirements
 
