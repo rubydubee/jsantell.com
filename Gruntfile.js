@@ -8,18 +8,19 @@ module.exports = function(grunt) {
         }
       }
     },
-    cssmin : {
-      dist : {
-        src: [
-          'public/css/normalize.css',
-          'public/css/layout.css',
-          'public/css/font-awesome.css',
-          'public/css/prettify.css'
-        ],
-        dest: 'public/css/site.css'
+    cssmin: {
+      compress: {
+        files: {
+          'public/css/site.css' : [
+            'public/css/normalize.css',
+            'public/css/layout.css',
+            'public/css/font-awesome.css',
+            'public/css/prettify.css'
+          ]
+        }
       }
     },
-    min : {
+    uglify: {
       dist : {
         src : 'public/js/site.js',
         dest : 'public/js/site.min.js'
@@ -43,6 +44,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib');
   grunt.loadNpmTasks('grunt-css');
 
-  grunt.registerTask('default', 'stylus cssmin concat min');
+  grunt.registerTask('default', 'stylus cssmin concat uglify'.split(' '));
 
 };
