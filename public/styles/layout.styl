@@ -183,6 +183,13 @@ h3.tags
   clear: both
   height: 800px
   line-height: 1.5em
+  img.profile
+    display: block
+    border-radius: 10px
+    margin: 10px auto
+    height: 120px
+    width: 120px
+    border: 1px solid #111
   .container 
     margin-left: auto
     margin-right: auto
@@ -299,7 +306,13 @@ img.center
   display: block
   margin: 0 auto
 
-
+.annotation
+  font-size: 10px
+  margin: 0 2px 0 2px
+  &:before
+    content: '['
+  &:after
+    content: ']'
 
 /*
  * Social
@@ -307,7 +320,7 @@ img.center
 
 ul.social 
   list-style: none
-  padding-left: 75px
+  padding-left: 92px
   li
     float: left
     font-size: 36px
