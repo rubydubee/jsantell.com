@@ -841,42 +841,6 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
   };
 }));
 
-// jquery.ghRepo.js
-// @jsantell (c) 2012
-
-;(function ( $ ) {
-
-  var
-    REPO_API = 'https://api.github.com/repos/',
-    ghRegex = /https?\:\/\/(www\.)?github.com\//;
-
-  $.fn.ghRepo = function ( options ) {
-    options = $.extend( {}, $.fn.ghRepo.defaults, options );
-
-    return this.each(function () {
-      var
-        $this = $( this ),
-        repo = options.repo || $this.data( 'ghRepo' );
-      if ( !repo ) {
-        repo = ( $this.is( 'a' ) ? $this : $this.closest( 'a' ) ).attr( 'href' );
-      }
-      $.ajax({
-        url      : REPO_API + repo.replace( ghRegex, '' ),
-        dataType : 'jsonp',
-        success  : function ( res ) {
-          $this.append( $('<span />', { text: res.data[ options.data ] }) );
-        }
-      });
-    });
-  };
-
-  $.fn.ghRepo.defaults = {
-    data : 'watchers',
-    repo : ''
-  };
-
-})( jQuery );
-
 var q=null;window.PR_SHOULD_USE_CONTINUATION=!0;
 (function(){function L(a){function m(a){var f=a.charCodeAt(0);if(f!==92)return f;var b=a.charAt(1);return(f=r[b])?f:"0"<=b&&b<="7"?parseInt(a.substring(1),8):b==="u"||b==="x"?parseInt(a.substring(2),16):a.charCodeAt(1)}function e(a){if(a<32)return(a<16?"\\x0":"\\x")+a.toString(16);a=String.fromCharCode(a);if(a==="\\"||a==="-"||a==="["||a==="]")a="\\"+a;return a}function h(a){for(var f=a.substring(1,a.length-1).match(/\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\[0-3][0-7]{0,2}|\\[0-7]{1,2}|\\[\S\s]|[^\\]/g),a=
 [],b=[],o=f[0]==="^",c=o?1:0,i=f.length;c<i;++c){var j=f[c];if(/\\[bdsw]/i.test(j))a.push(j);else{var j=m(j),d;c+2<i&&"-"===f[c+1]?(d=m(f[c+2]),c+=2):d=j;b.push([j,d]);d<65||j>122||(d<65||j>90||b.push([Math.max(65,j)|32,Math.min(d,90)|32]),d<97||j>122||b.push([Math.max(97,j)&-33,Math.min(d,122)&-33]))}}b.sort(function(a,f){return a[0]-f[0]||f[1]-a[1]});f=[];j=[NaN,NaN];for(c=0;c<b.length;++c)i=b[c],i[0]<=j[1]+1?j[1]=Math.max(j[1],i[1]):f.push(j=i);b=["["];o&&b.push("^");b.push.apply(b,a);for(c=0;c<
@@ -908,10 +872,6 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 
 $(function () {
     var DROP_SPEED = 250;
-
-    $('.gh-watch')
-        .append('<i class="icon-eye-open"></i>')
-        .ghRepo({ data: 'watchers' });
 
     $('.sidebar h3.categories a, .sidebar h3.tags a').click(function (e) {
         e.preventDefault();

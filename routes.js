@@ -1,3 +1,4 @@
+var repoData = require('./lib/repo-data');
 module.exports = function ( app ) {
 
   app.get( '/', function ( req, res ) {
@@ -8,7 +9,8 @@ module.exports = function ( app ) {
 
   app.get( '/projects', function ( req, res ) {
     res.render( 'projects', {
-      title: 'Projects * Jordan Santell'
+      title: 'Projects * Jordan Santell',
+      repos: repoData
     });
   });
 
