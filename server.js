@@ -19,6 +19,7 @@ poet.set({
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
+app.use(poet.middleware());
 app.use(app.router);
 app.use(handle404);
 
