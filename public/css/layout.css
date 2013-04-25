@@ -60,9 +60,9 @@ pre{color:#fffdeb;background-color:#2c3033;border-radius:4px;padding:10px}
 .citation{display:block;font-size:14px;font-style:italic;background-color:#eee;border-radius:15px;padding:5px;margin:10px 0;}
 .citation a:before{content:'-- '}
 img.center{display:block;margin:0 auto}
-.annotation{font-size:10px;margin:0 2px 0 2px;}
-.annotation:before{content:'['}
-.annotation:after{content:']'}
+.footnote{font-size:10px;margin:0 2px 0 2px;}
+.footnote:before{content:'['}
+.footnote:after{content:']'}
 ul.social{list-style:none;padding-left:92px;}
 ul.social li{float:left;font-size:36px;width:40px;margin-left:5px}
 ul.social span{display:none}

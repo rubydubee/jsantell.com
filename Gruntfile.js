@@ -42,7 +42,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib');
-  grunt.loadNpmTasks('grunt-css');
 
   grunt.registerTask('default', 'stylus cssmin concat uglify'.split(' '));
 
