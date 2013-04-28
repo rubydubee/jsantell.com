@@ -17,7 +17,7 @@ In the weeks before I joined Mozilla's Addon-SDK team, friends and family often 
 Now, buckle up -- this metaphor is useful for interface designers as well.
 
 <img src="/img/posts/flight-simulator.jpg" alt="Flight Simulator" class="center" />
-This is what picking up [three.js](http://threejs.org/) felt like. Great API, but still a complex domain!
+<p class="caption">This is what picking up [three.js](http://threejs.org/) felt like. Great API, but still a complex domain!</p>
 
 ## Consistency -> Intuitive
 
@@ -26,7 +26,7 @@ An API that's intuitive just works how one would expect it to. If a developer ca
 **If users of the library do the equivilent of putting the joystick and buttons in their mouths, you're doing something wrong.**
 
 <img src="/img/posts/small-arcade-machine.jpeg" alt="Man screaming at arcade machine" class="center" />
-This is the face you should make when designing APIs.
+<p class="caption">This is the face you should make when designing APIs.</p>
 
 Simple libraries, like most [components](https://github.com/component/component/wiki/Components) or [Substack-style npm modules](https://npmjs.org/~substack), can achieve an intuitive interface with a small surface area, doing one thing and one thing well. Libraries like [underscore](http://underscorejs.org/) is just a collection of small modular utilities exposed under a single namespace resulting in a clean, intuitive interface. Larger libraries require a bit more finesse, and leveraging what knowledge you assume the user has deep in their brain already. This is your flight simulator.
 
