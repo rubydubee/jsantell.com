@@ -6,13 +6,13 @@
   "description" : "Overview of some API design goals of creating a good, intuitive, usable API."
 }}}
 
-We're currently designing an interface to Firefox's [Places API](https://developer.mozilla.org/en-US/docs/Places) for the [Jetpack API](https://developer.mozilla.org/en-US/docs/Jetpack), and going through this process, I began to think about what qualities I looked for in a *good API*. An interface should never hinder, only enhance, and to distill this thought into crude words, we want to provide the most **intuitive** and **flexible** interface possible to our add-on developers. From our perspective, we also want our features to be **maintainable**. These are all obvious goals when written down, but are stated so we can more tangibly discuss API design. Ignoring arguments of object-oriented versus functional, inheritence versus composition, emacs versus vim, and the like, these are all building blocks to achieve the goal of a *good API*. A means to an end.
+Here at Mozilla, we're currently designing an interface to Firefox's [Places API](https://developer.mozilla.org/en-US/docs/Places) for the [Jetpack API](https://developer.mozilla.org/en-US/docs/Jetpack). This feature has got me thinking about what qualities make a *good API*. An interface should enhance, never hinder, and so, to distill this thought into crude words, we want to provide the most **intuitive** and **flexible** interface possible to our add-on developers. From our perspective, we also want our features to be **maintainable**. While these terms may sound like buzzwords, they provide a standard and verifiable vocabulary for discussing API design, allowing us to ignore arguments of object-oriented versus functional, inheritence versus composition, emacs versus vim, and the like, as these are all building blocks to achieve the goal of a *good API*. A means to an end.
 
-Saving **flexibility** and **maintainability** for the future, here are some thoughts on designing an API that is **intuitive**.
+Let's start by defining what makes an API **intuitive**. We can take a closer look at **flexibility** and **maintainability** in future posts.
 
 ## The Interface
 
-In the weeks prior to joining Mozilla Addon-SDK team, I've had to explain to many what I'd be doing and what an API is, mostly non-programmers. The best metaphor I could come up with is an arcade cabinet. We make the buttons and joysticks (API) that interfaces with the arcade guts (Firefox) so that developers (the players) can just play without having to understand how the cabinet guts work. Some libraries are [small utility modules](https://github.com/substack/camelize) that just expose one method (Pac Man), and then there are [giant libraries](https://github.com/mrdoob/three.js/) that require a huge surface area due to complexity (flight simulators).
+In the weeks before I joined Mozilla's Addon-SDK team, friends and family often asked about the king of work we do here. This meant I had to explain what an API is, to an audience of non-programmers. The best metaphor I could come up with is an arcade cabinet. We make the buttons and joysticks (API) that interfaces with the arcade guts (Firefox) so that developers (the players) can just play without having to understand how the cabinet guts work. Some libraries are [small utility modules](https://github.com/substack/camelize) that just expose one method (Pac Man), and then there are [giant libraries](https://github.com/mrdoob/three.js/) that require a huge surface area due to complexity (flight simulators). The main point is that joysticks are used in arcade machines because they're intuitive.
 
 Now, buckle up -- this metaphor is useful for interface designers as well.
 
@@ -21,7 +21,7 @@ This is what picking up [three.js](http://threejs.org/) felt like. Great API, bu
 
 ## Consistency -> Intuitive
 
-An API that's intuitive just works how one would expect it to. If a developer can glance over some documentation and begin with some trial and error, that's a good start. An intuitive API is a desirable goal since it means the users spend less time learning and more time doing. We can go up to most arcade machines and figure out *what is up*. Hit some buttons, move around the joystick, learn from visual feedback. We have this knowledge because we've interfaced with buttons and similar controllers before. That's the goal of an API: for a developer to spend a few minutes reading docs, and then it's no longer a strange new interface, but a familiar environment. Ultimately, it becomes a part of their toolbelt, not dissimilar to standard libraries. They know how the joystick and buttons work.
+An API that's intuitive just works how one would expect it to. If a developer can glance over some documentation and begin with some trial and error, that's a good start. An intuitive API is a desirable goal since it means the users spend less time learning and more time doing. We can go up to most arcade machines and figure out *what is up*. Hit some buttons, move around the joystick, learn from visual feedback. We have this knowledge because we've interfaced with buttons and similar controllers before. That's the goal of an API: for a developer to spend a few minutes assessing the lay of the land, only to realize it feels pleasantly familiar. Ultimately, the API becomes a part of a developer's toolbelt, not dissimilar to standard libraries. They know how the joystick and buttons work.
 
 **If users of the library do the equivilent of putting the joystick and buttons in their mouths, you're doing something wrong.**
 
@@ -30,7 +30,7 @@ This is the face you should make when designing APIs.
 
 Simple libraries, like most [components](https://github.com/component/component/wiki/Components) or [Substack-style npm modules](https://npmjs.org/~substack), can achieve an intuitive interface with a small surface area, doing one thing and one thing well. Libraries like [underscore](http://underscorejs.org/) is just a collection of small modular utilities exposed under a single namespace resulting in a clean, intuitive interface. Larger libraries require a bit more finesse, and leveraging what knowledge you assume the user has deep in their brain already. This is your flight simulator.
 
-Consistency leads to an intuitive design. Designers can  create consistency by tapping into users' existing knowledge.
+Consistency leads to an intuitive design. Designers can create consistency by tapping into users' existing knowledge.
 
 **Design for the environment**. Use existing language and platform idioms -- in JavaScript, using `camelCase` versus `snake_case`. Your [node.js](http://nodejs.org) module better be asynchronous and your callbacks should follow the idiomatic node callback signature with an `error` in first position. Your [jQuery](http://jquery.com) plugin better return `this` and be chainable. When designing APIs for Jetpack, we think about how they can be similar to other modules in the SDK.
 
@@ -51,7 +51,7 @@ expect([1,2,3]).to.include(2);
 expect(15).to.be.equal(15);
 </pre>
 
-Chainable verbs can also set flags for the final assertion, keeping consistent with Chai's pattern:
+Chainable words can also set flags for the final assertion, keeping consistent with Chai's pattern:
 
 <pre>
 // Chain modifiers for negation (not)
@@ -80,7 +80,7 @@ x.should.have.length(3);
 
 ## Go forth and harvest humanity's body of knowledge
 
-Hopefully this will spark thinking of intuitive with regard to API design, and what sources of knowledge one can use to influence how a library is used. I imagine things will start to get really fun when [ES6 Proxies](http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies) are everywhere and we can safely implement Ruby's [method_missing](http://rubylearning.com/satishtalim/ruby_method_missing.html)  [in JavaScript](https://gist.github.com/paulmillr/1648257)<sup class="footnote">1</sup>. I'll write in the future about **flexibility** and **maintainability** in design, and in the mean time dig through some of your favourite source code and docs and see if any of this applies.
+Hopefully this will spark thinking of intuitive with regard to API design, and what sources of knowledge one can use to influence how a library is used. I imagine things will start to get really fun when [ES6 Proxies](http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies) are everywhere and we can safely implement Ruby's [method_missing](http://rubylearning.com/satishtalim/ruby_method_missing.html)  [in JavaScript](https://gist.github.com/paulmillr/1648257)<sup class="footnote">1</sup>. In future posts, I'll address both **flexibility** and **maintainability** in API design, and in the meantime dig through some of your favourite source code and docs and see if any of this applies.
 
 What are some other API design goals and good examples of intuitive APIs? What other sources of knowledge can be used when designing them? Pac Man or flight simulators?
 
