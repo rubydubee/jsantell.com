@@ -17,7 +17,7 @@ In the weeks before I joined Mozilla's Addon-SDK team, friends and family often 
 Now, buckle up -- this metaphor is useful for interface designers as well.
 
 <img src="/img/posts/flight-simulator.jpg" alt="Flight Simulator" class="center" />
-<p class="caption">This is what picking up [three.js](http://threejs.org/) felt like. Great API, but still a complex domain!</p>
+<p class="caption">This is what picking up three.js felt like. Great API, but still a complex domain!</p>
 
 ## Consistency -> Intuitive
 
