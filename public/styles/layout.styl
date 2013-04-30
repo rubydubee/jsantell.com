@@ -30,7 +30,6 @@ body
   padding-right: 50px
   margin-bottom: 20px
 
-
 .sidebar
   width: 210px
   float: right
@@ -51,6 +50,7 @@ a
   text-decoration: none
   color: #FF0077
   font-weight: 300
+  transition: background-color 0.1s
   &:hover
     color: #333
     background-color: #aaee22
@@ -70,6 +70,7 @@ a span.label
   margin: 0 3px
   border-radius: 4px
   box-shadow: 3px 3px 0 #04DBE5, -3px -3px 0 #FF0077
+  transition: box-shadow 0.1s
 
 a:hover span.label
     box-shadow: 3px 3px 0 #aaee22, -3px -3px 0 #FFB412
@@ -96,6 +97,7 @@ a:hover span.label
     text-decoration: none
     border: 1px solid #ddd
     border-left-width: 0
+    transition: background-color 0.1s
   .active a, a:hover
     background-color: #f5f5f5
   .active a
@@ -232,6 +234,7 @@ h3.tags
   float: left
   width: 65px
   color: #666
+  transition: box-shadow 0.1s
 
 
 a:hover .gh-watch, a:hover .gh-fill 
@@ -259,6 +262,7 @@ a:hover .gh-watch, a:hover .gh-fill
     position: absolute
     left: 80px
     top: 2px
+    transition: background-color 0.1s
   a:hover h3
     background-color: #aaee22
   li > span
@@ -276,7 +280,8 @@ ul.projects
 
 div.post 
   position: relative
-
+  p
+    font-size: 110%
 
 span.date 
   position: absolute
