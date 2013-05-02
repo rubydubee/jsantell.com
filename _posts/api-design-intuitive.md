@@ -2,11 +2,11 @@
   "title" : "API Design Goals: Intuitive APIs",
   "tags" : [ "api design" ],
   "category" : "api design",
-  "date" : "4-25-2013",
+  "date" : "4-30-2013",
   "description" : "Overview of some API design goals of creating a good, intuitive, usable API."
 }}}
 
-Here at Mozilla, we're currently designing an interface to Firefox's [Places API](https://developer.mozilla.org/en-US/docs/Places) for the [Jetpack API](https://developer.mozilla.org/en-US/docs/Jetpack). This feature has got me thinking about what qualities make a *good API*. An interface should enhance, never hinder, and so, to distill this thought into crude words, we want to provide the most **intuitive** and **flexible** interface possible to our add-on developers. From our perspective, we also want our features to be **maintainable**. While these terms may sound like buzzwords, they provide a standard and verifiable vocabulary for discussing API design, allowing us to ignore arguments of object-oriented versus functional, inheritence versus composition, emacs versus vim, and the like, as these are all building blocks to achieve the goal of a *good API*. A means to an end.
+Here at Mozilla, we're currently designing an interface to Firefox's [Places API](https://developer.mozilla.org/en-US/docs/Places) for the [Jetpack API](https://developer.mozilla.org/en-US/docs/Jetpack). This feature has got me thinking about what qualities make a *good API*. An interface should enhance, never hinder, and so, to distill this thought into crude words, we want to provide the most **intuitive** and **flexible** interface possible to our add-on developers. From our perspective, we also want our features to be **maintainable**. While these terms may sound like buzzwords, they provide a standard and verifiable vocabulary for discussing API design, allowing us to ignore arguments of object-oriented versus functional, inheritence versus composition, comma-first, required semi-colons, and the like, as these are all building blocks to achieve the goal of a *good API*. A means to an end.
 
 Let's start by defining what makes an API **intuitive**. We can take a closer look at **flexibility** and **maintainability** in future posts.
 
