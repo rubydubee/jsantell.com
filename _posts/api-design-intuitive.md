@@ -6,18 +6,18 @@
   "description" : "Overview of some API design goals of creating a good, intuitive, usable API."
 }}}
 
-Here at Mozilla, we're currently designing an interface to Firefox's [Places API](https://developer.mozilla.org/en-US/docs/Places) for the [Jetpack API](https://developer.mozilla.org/en-US/docs/Jetpack). This feature has got me thinking about what qualities make a *good API*. An interface should enhance, never hinder, and so, to distill this thought into crude words, we want to provide the most **intuitive** and **flexible** interface possible to our add-on developers. From our perspective, we also want our features to be **maintainable**. While these terms may sound like buzzwords, they provide a standard and verifiable vocabulary for discussing API design, allowing us to ignore arguments of object-oriented versus functional, inheritence versus composition, emacs versus vim, and the like, as these are all building blocks to achieve the goal of a *good API*. A means to an end.
+Here at Mozilla, we're currently designing an interface to Firefox's [Places API](https://developer.mozilla.org/en-US/docs/Places) for the [Jetpack API](https://developer.mozilla.org/en-US/docs/Jetpack). This feature has got me thinking about what qualities make a *good API*. An interface should enhance, never hinder, and so, to distill this thought into crude words, we want to provide the most **intuitive** and **flexible** interface possible to our add-on developers. From our perspective, we also want our features to be **maintainable**. While these terms may sound like buzzwords, they provide a standard and verifiable vocabulary for discussing API design, allowing us to ignore arguments of object-oriented versus functional, inheritence versus composition, comma-first, required semi-colons, and the like, as these are all building blocks to achieve the goal of a *good API*. A means to an end.
 
 Let's start by defining what makes an API **intuitive**. We can take a closer look at **flexibility** and **maintainability** in future posts.
 
 ## The Interface
 
-In the weeks before I joined Mozilla's Addon-SDK team, friends and family often asked about the king of work we do here. This meant I had to explain what an API is, to an audience of non-programmers. The best metaphor I could come up with is an arcade cabinet. We make the buttons and joysticks (API) that interfaces with the arcade guts (Firefox) so that developers (the players) can just play without having to understand how the cabinet guts work. Some libraries are [small utility modules](https://github.com/substack/camelize) that just expose one method (Pac Man), and then there are [giant libraries](https://github.com/mrdoob/three.js/) that require a huge surface area due to complexity (flight simulators). The main point is that joysticks are used in arcade machines because they're intuitive.
+In the weeks before I joined Mozilla's Addon-SDK team, friends and family often asked about the kind of work we do here. This meant I had to explain what an API is, to an audience of non-programmers. The best metaphor I could come up with is an arcade cabinet. We make the buttons and joysticks (API) that interfaces with the arcade guts (Firefox) so that developers (the players) can just play without having to understand how the cabinet guts work. Some libraries are [small utility modules](https://github.com/substack/camelize) that just expose one method (Pac Man), and then there are [giant libraries](https://github.com/mrdoob/three.js/) that require a huge surface area due to complexity (flight simulators). The main point is that joysticks are used in arcade machines because they're intuitive.
 
 Now, buckle up -- this metaphor is useful for interface designers as well.
 
 <img src="/img/posts/flight-simulator.jpg" alt="Flight Simulator" class="center" />
-<p class="caption">This is what picking up [three.js](http://threejs.org/) felt like. Great API, but still a complex domain!</p>
+<p class="caption">This is what picking up three.js felt like. Great API, but still a complex domain!</p>
 
 ## Consistency -> Intuitive
 
@@ -36,7 +36,7 @@ Consistency leads to an intuitive design. Designers can create consistency by ta
 
 **Design for the audience**. jQuery uses CSS selectors for creating jQuery objects and has become a popular gateway into JavaScript from HTML/CSS. [John Resig](http://ejohn.org/) took the knowledge front-end developers already had (selectors) and applied it to a new world for the same audience.
 
-**Design for the library itself**. Be consistent throughout your own library. If a method is named `getProp`, don't name the setter `setProperty`. Mostly semantic, use the same naming conventions, rules, abbreviations and limitations throughout the library. Naming is an artistic balance between clarity and not having [monster method names](http://stackoverflow.com/a/3670922).
+**Design for the library itself**. Be consistent throughout your own library. If a method is named `getProp`, don't name the setter `setProperty`. Don't have `getID` in one place and `getId` in another. Mostly semantic, use the same naming conventions, rules, abbreviations and limitations throughout the library. Naming is an artistic balance between clarity and not having [monster method names](http://stackoverflow.com/a/3670922).
 
 These are just three examples of sources of knowledge that can inspire a designer when striving for consistency, and there are countless more areas of shared knowledge waiting to be leveraged.
 
