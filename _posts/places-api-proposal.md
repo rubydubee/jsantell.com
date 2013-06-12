@@ -1,12 +1,16 @@
 {{{
-  "title" : "Places API Coming to Jetpacks",
+  "title" : "Jetpack's Places API Proposal",
   "tags" : [ "jetpack", "api design" ],
   "category" : "jetpack",
   "date" : "6-13-2013",
-  "description" : "Overview of some API design goals of creating a good, intuitive, usable API."
+  "description" : "Jetpack's Places API proposal, showing examples, and proposed API for manipulating Firefox's bookmarks and history"
 }}}
 
-[Places](https://developer.mozilla.org/en-US/docs/Places), Firefox's bookmark and history management system, is coming to [Firefox Add-on SDK](https://addons.mozilla.org/en-US/developers/) for add-on developers to easily manipulate bookmarks and query browsing history.
+[Places](https://developer.mozilla.org/en-US/docs/Places), Firefox's bookmark and history management system, is coming to [Firefox Add-on SDK](https://addons.mozilla.org/en-US/developers/) for add-on developers to easily manipulate bookmarks and query browsing history. Current API proposal, examples, and design decisions below!
+
+<img src="/img/posts/jetpack.png" class="center" alt="Jetpacks" />
+
+<!--more-->
 
 The Places API initial implementation is scheduled to hit Firefox 24 (aurora) later this month, and the current API proposal can be found in the [addon-sdk wiki](https://github.com/mozilla/addon-sdk/wiki/JEP-places-API), with current implementation progress in my [places-api branch](https://github.com/jsantell/addon-sdk/tree/places-api).
 
