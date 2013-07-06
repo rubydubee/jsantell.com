@@ -30,8 +30,8 @@ app.configure('production', function () {
 require('./routes' )(app);
 
 // Get repository data
-//schedule.scheduleJob('0 * * * *', updateRepoData);
-//updateRepoData();
+schedule.scheduleJob('0 * * * *', updateRepoData);
+updateRepoData();
 
 app.listen(3333);
 
