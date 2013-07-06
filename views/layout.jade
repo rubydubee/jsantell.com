@@ -40,15 +40,15 @@ html
           h3.categories
             a(href='/categories') Categories
           ul
-            - each cat in categoryList
+            - each cat in getCategories()
               li
-                a(href=categoryUrl(cat)) #{cat}
+                a(href=categoryURL(cat)) #{cat}
           h3.tags
             a(href='/tags') tags
           ul
-            - each tag in tagList
+            - each tag in getTags()
               li
-                a(href=tagUrl(tag)) #{tag}
+                a(href=tagURL(tag)) #{tag}
         .clear
     .footer
       .container

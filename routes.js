@@ -16,7 +16,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/tags', function (req, re) {
+  app.get('/tags', function (req, res) {
     res.render('tags', {
       title: 'Tags * Jordan Santell'
     });
