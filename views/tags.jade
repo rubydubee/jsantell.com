@@ -3,6 +3,6 @@ extends layout
 block content
   h1 All Tags
   ul
-    - each tag in tagList
+    - each tag in getTags()
       li
-        a(href=tagUrl(tag)) #{tag}
+        a(href=tagURL(tag)) #{tag}

@@ -12,7 +12,7 @@ Let's start by defining what makes an API **intuitive**. We can take a closer lo
 
 ## The Interface
 
-In the weeks before I joined Mozilla's Addon-SDK team, friends and family often asked about the king of work we do here. This meant I had to explain what an API is, to an audience of non-programmers. The best metaphor I could come up with is an arcade cabinet. We make the buttons and joysticks (API) that interfaces with the arcade guts (Firefox) so that developers (the players) can just play without having to understand how the cabinet guts work. Some libraries are [small utility modules](https://github.com/substack/camelize) that just expose one method (Pac Man), and then there are [giant libraries](https://github.com/mrdoob/three.js/) that require a huge surface area due to complexity (flight simulators). The main point is that joysticks are used in arcade machines because they're intuitive.
+In the weeks before I joined Mozilla's Addon-SDK team, friends and family often asked about the kind of work we do here. This meant I had to explain what an API is, to an audience of non-programmers. The best metaphor I could come up with is an arcade cabinet. We make the buttons and joysticks (API) that interfaces with the arcade guts (Firefox) so that developers (the players) can just play without having to understand how the cabinet guts work. Some libraries are [small utility modules](https://github.com/substack/camelize) that just expose one method (Pac Man), and then there are [giant libraries](https://github.com/mrdoob/three.js/) that require a huge surface area due to complexity (flight simulators). The main point is that joysticks are used in arcade machines because they're intuitive.
 
 Now, buckle up -- this metaphor is useful for interface designers as well.
 
@@ -36,7 +36,7 @@ Consistency leads to an intuitive design. Designers can create consistency by ta
 
 **Design for the audience**. jQuery uses CSS selectors for creating jQuery objects and has become a popular gateway into JavaScript from HTML/CSS. [John Resig](http://ejohn.org/) took the knowledge front-end developers already had (selectors) and applied it to a new world for the same audience.
 
-**Design for the library itself**. Be consistent throughout your own library. If a method is named `getProp`, don't name the setter `setProperty`. Mostly semantic, use the same naming conventions, rules, abbreviations and limitations throughout the library. Naming is an artistic balance between clarity and not having [monster method names](http://stackoverflow.com/a/3670922).
+**Design for the library itself**. Be consistent throughout your own library. If a method is named `getProp`, don't name the setter `setProperty`. Don't have `getID` in one place and `getId` in another. Mostly semantic, use the same naming conventions, rules, abbreviations and limitations throughout the library. Naming is an artistic balance between clarity and not having [monster method names](http://stackoverflow.com/a/3670922).
 
 These are just three examples of sources of knowledge that can inspire a designer when striving for consistency, and there are countless more areas of shared knowledge waiting to be leveraged.
 

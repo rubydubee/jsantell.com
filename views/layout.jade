@@ -22,12 +22,9 @@ html
     meta(charset='utf-8')
     link(rel='icon', type='image/png', href='/favicon.png')
     - if (settings.env == 'development')
-      link(rel='stylesheet', href='/css/normalize.css')
-      link(rel='stylesheet', href='/css/layout.css')
-      link(rel='stylesheet', href='/css/font-awesome.css')
-      link(rel='stylesheet', href='/css/prettify.css')
-    - else
       link(rel='stylesheet', href='/css/site.css')
+    - else
+      link(rel='stylesheet', href='/css/site.min.css')
     script(src='/js/ga.js')
   body
     .wrap
@@ -43,15 +40,15 @@ html
           h3.categories
             a(href='/categories') Categories
           ul
-            - each cat in categoryList
+            - each cat in getCategories()
               li
-                a(href=categoryUrl(cat)) #{cat}
+                a(href=categoryURL(cat)) #{cat}
           h3.tags
             a(href='/tags') tags
           ul
-            - each tag in tagList
+            - each tag in getTags()
               li
-                a(href=tagUrl(tag)) #{tag}
+                a(href=tagURL(tag)) #{tag}
         .clear
     .footer
       .container
@@ -64,11 +61,6 @@ html
           .tweets
         .clear
   - if (settings.env == 'development')
-    script(src='/js/jquery.js')
-    script(src='/js/jquery.sharrre.js')
-    script(src='/js/jquery.tweet.js')
-    script(src='/js/jquery.ghRepo.js')
-    script(src='/js/prettify.js')
-    script(src='/js/ui.js')
+    script(src='/js/site.js')
   - else
     script(src='/js/site.min.js')
