@@ -3,7 +3,7 @@
   "tags" : [ "jetpack", "firefox", "android" ],
   "category" : "jetpack",
   "date" : "7-22-2013",
-  "description" : "A tutorial for setting up an Android emulator for running Jetpack tests and add-ons on Firefox for Android",
+  "description" : "A tutorial for setting up an Android emulator for running Jetpack tests and add-ons on Firefox for Android"
 }}}
 
 Firefox's [Add-on SDK](https://addons.mozilla.org/en-US/developers/) provides abstractions for manipulating components such as [tabs](https://addons.mozilla.org/en-US/developers/docs/sdk/latest/modules/sdk/tabs.html) and [page-workers](https://addons.mozilla.org/en-US/developers/docs/sdk/latest/modules/sdk/page-worker.html) between Firefox desktop and Firefox for Android. There are [several](https://blog.mozilla.org/addons/2012/02/06/mobile-add-on-development-using-the-add-on-sdk/) [guides](https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/mobile.html) for testing an add-on with an Android device, but not all developers have a device for testing; here's how to run your add-on with the Android emulator.
@@ -91,4 +91,4 @@ Now you can run your add-on through the Android emulator, run its tests, or even
 
 <img src="/img/posts/running_tests_fennec.png" class="center" alt="Running Tests on Fennec" />
 
-More and more features are being added to Firefox for Android -- be sure to follow the [Add-ons Blog](https://blog.mozilla.org/addons/) for upcoming information and crank out some mobile add-ons!
+[Let me know](http://twitter.com/jsantell) if this improved your workflow or if you had any issues with setting up the emulator! More and more features are being added to Firefox for Android in every release -- be sure to follow the [Add-ons Blog](https://blog.mozilla.org/addons/) for upcoming information and crank out some mobile add-ons!
