@@ -1,10 +1,9 @@
 {{{
-  "title" : "Running Firefox Mobile Add-ons on Emulator",
+  "title" : "Testing Firefox Mobile Add-ons with an Emulator",
   "tags" : [ "jetpack", "firefox", "android" ],
   "category" : "jetpack",
-  "date" : "7-23-2013",
-  "description" : "",
-  "draft": true
+  "date" : "7-22-2013",
+  "description" : "A tutorial for setting up an Android emulator for running Jetpack tests and add-ons on Firefox for Android",
 }}}
 
 Firefox's [Add-on SDK](https://addons.mozilla.org/en-US/developers/) provides abstractions for manipulating components such as [tabs](https://addons.mozilla.org/en-US/developers/docs/sdk/latest/modules/sdk/tabs.html) and [page-workers](https://addons.mozilla.org/en-US/developers/docs/sdk/latest/modules/sdk/page-worker.html) between Firefox desktop and Firefox for Android. There are [several](https://blog.mozilla.org/addons/2012/02/06/mobile-add-on-development-using-the-add-on-sdk/) [guides](https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/mobile.html) for testing an add-on with an Android device, but not all developers have a device for testing; here's how to run your add-on with the Android emulator.
