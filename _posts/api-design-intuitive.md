@@ -2,7 +2,7 @@
   "title" : "API Design Goals: Intuitive APIs",
   "tags" : [ "api design" ],
   "category" : "api design",
-  "date" : "4-25-2013",
+  "date" : "4-30-2013",
   "description" : "Overview of some API design goals of creating a good, intuitive, usable API."
 }}}
 
