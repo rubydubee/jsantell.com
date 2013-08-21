@@ -1,3 +1,7 @@
 node_modules
 .DS_Store
 *.sw*
+public/js/site.js
+public/js/site.min.js
+public/css/site.css
+public/css/site.min.css

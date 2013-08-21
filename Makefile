@@ -13,7 +13,9 @@ stylus:
 	done
 
 concat:
-	cat $(PUBLIC)/js/jquery.js > $(PUBLIC)/js/site.js
+	echo "var ENV_GA='$(JSANTELL_COM_GA)';\n" > $(PUBLIC)/js/site.js
+	echo "var ENV_DISQUS='$(JSANTELL_COM_DISQUS)';\n" >> $(PUBLIC)/js/site.js
+	cat $(PUBLIC)/js/jquery.js >> $(PUBLIC)/js/site.js
 	cat $(PUBLIC)/js/jquery.sharrre.js >> $(PUBLIC)/js/site.js
 	cat $(PUBLIC)/js/jquery.tweet.js >> $(PUBLIC)/js/site.js
 	cat $(PUBLIC)/js/prettify.js >> $(PUBLIC)/js/site.js

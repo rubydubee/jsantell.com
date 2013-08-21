@@ -1,5 +1,7 @@
+if (!window.ENV_GA)
+  ENV_GA = '';
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-23782413-1']);
+_gaq.push(['_setAccount', ENV_GA]);
 _gaq.push(['_trackPageview']);
 
 (function() {
