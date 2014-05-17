@@ -14,13 +14,13 @@ stylus:
 
 concat:
 	echo "var ENV_GA='$(JSANTELL_COM_GA)';\n" > $(PUBLIC)/js/site.js
-	echo "window.initDisqus && initDisqus('$(JSANTELL_COM_DISQUS)');\n" >> $(PUBLIC)/js/site.js
 	cat $(PUBLIC)/js/ga.js >> $(PUBLIC)/js/site.js
 	cat $(PUBLIC)/js/jquery.js >> $(PUBLIC)/js/site.js
 	cat $(PUBLIC)/js/jquery.sharrre.js >> $(PUBLIC)/js/site.js
 	cat $(PUBLIC)/js/jquery.tweet.js >> $(PUBLIC)/js/site.js
 	cat $(PUBLIC)/js/prettify.js >> $(PUBLIC)/js/site.js
 	cat $(PUBLIC)/js/ui.js >> $(PUBLIC)/js/site.js
+	cat $(PUBLIC)/js/disqus.js >> $(PUBLIC)/js/site.js
 	
 	cat $(PUBLIC)/css/normalize.css > $(PUBLIC)/css/site.css
 	cat $(PUBLIC)/css/layout.css >> $(PUBLIC)/css/site.css
