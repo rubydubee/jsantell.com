@@ -1,6 +1,6 @@
 {
   "name": "jsantell.com",
-  "version": "0.0.1-41",
+  "version": "0.0.1-45",
   "private": true,
   "engines": {
     "node": "0.8.x"
@@ -10,7 +10,7 @@
   },
   "main": "server.js",
   "dependencies": {
-    "express": ">= 3.0.0rc5",
+    "express": "3.0.0",
     "jade": "1.1.5",
     "poet": "1.0.0rc3",
     "node-schedule": ">= 0.1.8",
