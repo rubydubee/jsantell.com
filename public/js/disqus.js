@@ -1,4 +1,4 @@
-(function initDisqus () {
+(function () {
   // Just bake in disqus account name, now have it blocked on other domains
   // when people fork this repo
   disqus_shortname = 'jordansantell';
