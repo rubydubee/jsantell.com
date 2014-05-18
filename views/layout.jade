@@ -59,7 +59,7 @@ html
           h3 and why won't they stop screaming
           .tweets
         .clear
-  - if (settings.env == 'development')
-    script(src='/js/site.js')
-  - else
-    script(src='/js/site.min.js')
+    - if (settings.env == 'development')
+      script(src='/js/site.js')
+    - else
+      script(src='/js/site.min.js')
